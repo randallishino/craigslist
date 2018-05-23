@@ -1,0 +1,27 @@
+.listings-page {
+    background: #fff;
+
+    .filter {
+        color: blue;
+        display: flex;
+        .form-group-price {
+            display:flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            label {
+                font-weight: 700px;
+            }
+    
+            select {
+                background: #fff;
+                border-radius: 5px;
+                padding: 10px;
+                color:#1b1b1b;
+            }
+        }
+
+
+     
+    }
+}

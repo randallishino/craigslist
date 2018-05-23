@@ -1,0 +1,78 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "home";
+@import "listings";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(135deg, rgba(75,52,247,.8) 0%, rgba(166,39,230,.8) 100%),
+  url("https://odis.homeaway.com/odis/destination/2b4108ba-cbdb-4505-8950-57b997042ef9.hw1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color:white
+}
+
+.fas {
+  margin-left: 10px;
+}
+
+.left-menu {
+  display: flex;
+  
+  .logo {
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+  }
+
+  .city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+  }
+}
+
+.right-menu {
+  display: flex;
+  
+  .user-img {
+    justify-content: center;
+    align-items: center;
+    display:flex;
+  }
+
+  .user-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .post-btn {
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    background: rgb(119,196,255);
+    color:white;
+  }
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
