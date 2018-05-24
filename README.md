@@ -4,11 +4,11 @@ A clone of craigslist built in Node.js and React.js
 
 ** Technologies Used **
 ---------
-React.JS
+React.js
 
 ES6
 
-Node.JS
+Node.js
 
 Sass
 
