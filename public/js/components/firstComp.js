@@ -182,11 +182,7 @@ var Header = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "right-menu" },
-            _react2.default.createElement(
-              "div",
-              { className: "user-img" },
-              "img"
-            ),
+            _react2.default.createElement("div", { className: "user-img" }),
             _react2.default.createElement(
               "div",
               { className: "user-dropdown" },
@@ -316,12 +312,12 @@ var Home = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
 
     _this.loopTags = function () {
-      var tags = [1, 2, 3, 4, 5, 6, 7];
-      return tags.map(function (item, i) {
+      var items = ["Apple Macbook", "iPhone X", "Hoverboard", "Lebron James Lakers jersey", "Nvidia GTX 1080", "Beats by Dre", "Kobe Bryant autographed jersey", "Lakers tickets"];
+      return items.map(function (item, i) {
         return _react2.default.createElement(
           "div",
           { key: i, className: "tag" },
-          "Apple Macbook"
+          item
         );
       });
     };
@@ -421,9 +417,9 @@ var Home = function (_Component) {
           _react2.default.createElement(
             "h1",
             null,
-            "Connecting People ",
+            "Find anything you need. ",
             _react2.default.createElement("br", null),
-            "Everywhere"
+            "We're here to connect you."
           ),
           _react2.default.createElement(
             "section",
@@ -516,12 +512,7 @@ var Home = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "trending-tags" },
-              this.loopTags(),
-              _react2.default.createElement(
-                "div",
-                { className: "tag" },
-                "Apple Macbook"
-              )
+              this.loopTags()
             )
           )
         )
@@ -664,10 +655,10 @@ var Listings = function (_Component) {
           { className: "container" },
           _react2.default.createElement(
             "section",
-            { className: "filter" },
+            { id: "filter" },
             _react2.default.createElement(
               "div",
-              { className: " form-group price" },
+              { className: "form-group price" },
               _react2.default.createElement(
                 "label",
                 null,

@@ -21,7 +21,7 @@ export default class Header extends Component {
           </div>
 
           <div className={`right-menu`}>
-            <div className={`user-img`}>img</div>
+            <div className={`user-img`}></div>
             <div className={`user-dropdown`}>
               my account
               <i className={`fas fa-chevron-down`} />

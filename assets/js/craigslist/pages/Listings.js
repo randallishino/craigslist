@@ -12,8 +12,8 @@ export default class Listings extends Component {
     return (
       <div className="listings-page">
         <div className="container">
-          <section className="filter">
-            <div className=" form-group price">
+          <section id="filter">
+            <div className="form-group price">
               <label>Price</label>
               <select name="min-price" className="min-price">
                 <option value="0"> 0</option>

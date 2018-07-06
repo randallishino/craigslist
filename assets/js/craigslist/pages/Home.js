@@ -9,10 +9,10 @@ export default class Home extends Component {
   }
 
   loopTags = () => {
-    let tags = [1, 2, 3, 4, 5, 6,7];
-    return tags.map((item, i) => (
+    let items =  ["Apple Macbook","iPhone X", "Hoverboard","Lebron James Lakers jersey","Nvidia GTX 1080","Beats by Dre","Kobe Bryant autographed jersey","Lakers tickets"]
+    return items.map((item, i) => (
       <div key={i} className="tag">
-        Apple Macbook
+        {item}
       </div>
     ));
   };
@@ -71,7 +71,7 @@ export default class Home extends Component {
       <div className="home">
         <div className="container">
           <h1>
-            Connecting People <br />Everywhere
+            Find anything you need. <br />We're here to connect you.
           </h1>
           <section className={`links`}>
             {this.loopCategories()}
@@ -126,7 +126,6 @@ export default class Home extends Component {
 
             <div className="trending-tags">
               {this.loopTags()}
-              <div className="tag">Apple Macbook</div>
             </div>
           </section>
         </div>
