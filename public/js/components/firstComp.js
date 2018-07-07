@@ -303,6 +303,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var items = [{
+
+  subjects: ["Activities", "Artists", "Childcare", "Classes", "Events", "General", "Groups", "Local News", "Lost + Found", "Missed", "Connections", "Musicians", "Pets", "Politics", "Rants & Raves", "Rideshare", "Volunteers"]
+}];
+
 var Home = function (_Component) {
   _inherits(Home, _Component);
 
@@ -323,79 +328,40 @@ var Home = function (_Component) {
     };
 
     _this.loopCategories = function () {
-      var arr = [1, 2, 3, 4, 5, 6];
-      return arr.map(function (item, i) {
+      var categories = [{
+        id: 1,
+        title: "Community",
+        subjects: ["Activities", "Artists", "Childcare", "Classes", "Events", "General", "Groups", "Local News", "Lost + Found", "Missed", "Connections", "Musicians", "Pets", "Politics", "Rants & Raves", "Rideshare", "Volunteers"]
+      }, {
+        id: 2,
+        title: "Services",
+        subjects: ["Automotive", "Beauty", "Cell/Mobile"]
+      }];
+
+      // Had trouble accessing the subjects array. I realized it was probably because of nesting. 
+      // Separated subjects objects into its own array and used another map function to display it properly.
+      return categories.map(function (item, i) {
+        var arr = [];
+        arr.push(item.subjects);
+        console.log(arr[0]);
         return _react2.default.createElement(
           "div",
-          { className: "categories", key: item },
+          { className: "categories", key: item.id },
           _react2.default.createElement(
             "div",
             { className: "title" },
-            "Community"
+            item.title
           ),
           _react2.default.createElement(
             "div",
             { className: "group-links" },
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Community"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "General"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Activities"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Groups"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Artists"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Local News"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Child Care"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Lost & Found"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Classes"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Musician"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Events"
-            ),
-            _react2.default.createElement(
-              "a",
-              { href: "#", className: "link" },
-              "Pets"
-            )
+            arr[0].map(function (subject) {
+              return _react2.default.createElement(
+                "a",
+                { href: "#", key: subject.id, className: "link" },
+                subject
+              );
+            })
           )
         );
       });
@@ -424,80 +390,7 @@ var Home = function (_Component) {
           _react2.default.createElement(
             "section",
             { className: "links" },
-            this.loopCategories(),
-            _react2.default.createElement(
-              "div",
-              { className: "categories" },
-              _react2.default.createElement(
-                "div",
-                { className: "title" },
-                "Community"
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "group-links" },
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Community"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "General"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Activities"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Groups"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Artists"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Local News"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Child Care"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Lost & Found"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Classes"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Musician"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Events"
-                ),
-                _react2.default.createElement(
-                  "a",
-                  { href: "#", className: "link" },
-                  "Pets"
-                )
-              )
-            )
+            this.loopCategories()
           ),
           _react2.default.createElement(
             "section",

@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
+let items = [{
+
+  subjects: ["Activities", "Artists","Childcare","Classes","Events","General","Groups","Local News","Lost + Found",
+  "Missed","Connections","Musicians","Pets","Politics","Rants & Raves","Rideshare","Volunteers"]
+}]
+
 export default class Home extends Component {
   constructor() {
     super();
@@ -18,48 +24,31 @@ export default class Home extends Component {
   };
 
   loopCategories = () => {
-    let arr = [1, 2, 3, 4, 5, 6];
-    return arr.map((item, i) => {
-      return (
-        <div className="categories" key={item}>
-          <div className="title">Community</div>
+    let categories = [
+      {
+      id: 1,
+      title: "Community",
+      subjects: ["Activities", "Artists","Childcare","Classes","Events","General","Groups","Local News","Lost + Found",
+      "Missed","Connections","Musicians","Pets","Politics","Rants & Raves","Rideshare","Volunteers"]
+      },
+      {
+      id: 2,
+      title: "Services",
+      subjects: ["Automotive", "Beauty","Cell/Mobile"]
+      }]
+
+
+    // Had trouble accessing the subjects array. I realized it was probably because of nesting. 
+    // Separated subjects objects into its own array and used another map function to display it properly.
+    return categories.map((item, i) => { 
+      let arr = [];
+      arr.push(item.subjects);
+      console.log(arr[0]);
+        return (
+        <div className="categories" key={item.id}>
+          <div className="title">{item.title}</div>
           <div className="group-links">
-            <a href="#" className="link">
-              Community
-            </a>
-            <a href="#" className="link">
-              General
-            </a>
-            <a href="#" className="link">
-              Activities
-            </a>
-            <a href="#" className="link">
-              Groups
-            </a>
-            <a href="#" className="link">
-              Artists
-            </a>
-            <a href="#" className="link">
-              Local News
-            </a>
-            <a href="#" className="link">
-              Child Care
-            </a>
-            <a href="#" className="link">
-              Lost & Found
-            </a>
-            <a href="#" className="link">
-              Classes
-            </a>
-            <a href="#" className="link">
-              Musician
-            </a>
-            <a href="#" className="link">
-              Events
-            </a>
-            <a href="#" className="link">
-              Pets
-            </a>
+              {arr[0].map(subject => <a href="#" key={subject.id} className="link">{subject}</a>)}
           </div>
         </div>
       );
@@ -75,47 +64,6 @@ export default class Home extends Component {
           </h1>
           <section className={`links`}>
             {this.loopCategories()}
-            <div className="categories">
-              <div className="title">Community</div>
-              <div className="group-links">
-                <a href="#" className="link">
-                  Community
-                </a>
-                <a href="#" className="link">
-                  General
-                </a>
-                <a href="#" className="link">
-                  Activities
-                </a>
-                <a href="#" className="link">
-                  Groups
-                </a>
-                <a href="#" className="link">
-                  Artists
-                </a>
-                <a href="#" className="link">
-                  Local News
-                </a>
-                <a href="#" className="link">
-                  Child Care
-                </a>
-                <a href="#" className="link">
-                  Lost & Found
-                </a>
-                <a href="#" className="link">
-                  Classes
-                </a>
-                <a href="#" className="link">
-                  Musician
-                </a>
-                <a href="#" className="link">
-                  Events
-                </a>
-                <a href="#" className="link">
-                  Pets
-                </a>
-              </div>
-            </div>
           </section>
 
           <section className={`trending`}>
