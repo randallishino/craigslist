@@ -15,7 +15,7 @@ export default class Header extends Component {
           <div className={`left-menu`}>
             <div className={`logo`}>Craigslist</div>
             <div className={`city`}>
-              San Francisco
+              Los Angeles
               <i className={`fas fa-chevron-down`} />
             </div>
           </div>

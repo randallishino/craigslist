@@ -175,7 +175,7 @@ var Header = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "city" },
-              "San Francisco",
+              "Los Angeles",
               _react2.default.createElement("i", { className: "fas fa-chevron-down" })
             )
           ),
@@ -304,7 +304,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var items = [{
-
   subjects: ["Activities", "Artists", "Childcare", "Classes", "Events", "General", "Groups", "Local News", "Lost + Found", "Missed", "Connections", "Musicians", "Pets", "Politics", "Rants & Raves", "Rideshare", "Volunteers"]
 }];
 
@@ -317,8 +316,8 @@ var Home = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
 
     _this.loopTags = function () {
-      var items = ["Apple Macbook", "iPhone X", "Hoverboard", "Lebron James Lakers jersey", "Nvidia GTX 1080", "Beats by Dre", "Kobe Bryant autographed jersey", "Lakers tickets"];
-      return items.map(function (item, i) {
+      var trending = ["Apple Macbook", "iPhone X", "Hoverboard", "Lebron James Lakers jersey", "Nvidia GTX 1080", "Beats by Dre", "Kobe Bryant autographed jersey", "Lakers tickets"];
+      return trending.map(function (item, i) {
         return _react2.default.createElement(
           "div",
           { key: i, className: "tag" },
@@ -335,15 +334,26 @@ var Home = function (_Component) {
       }, {
         id: 2,
         title: "Services",
-        subjects: ["Automotive", "Beauty", "Cell/Mobile"]
+        subjects: ["Automotive", "Beauty", "Cell/Mobile", "Computer", "Creative", "Cycle", "Event", "Farm + Garden", "Financial", "Household", "Labor/Move", "Legal", "Lessions", "Marine", "Pet", "Real Estate", "Skilled Trade", "SM Biz Ads", "Travel/Vac", "Write/Ed/Tran"]
+      }, {
+        id: 3,
+        title: "Housing",
+        subjects: ["Apts/Housing", "Housing Swap", "Housing Wanted", "Office", "Parking/Storage", "Real Estate For Sale", "Rooms/Shared", "Rooms Wanted", "Sublets/Temporary", "Vacation Rentals"]
+      }, {
+        id: 4,
+        title: "Gigs",
+        subjects: ["Computer", "Creative", "Crew", "Domestic", "Event", "Labor", "Talent", "Writing"]
+      }, {
+        id: 5,
+        title: "For Sale",
+        subjects: ["Antiques", "Appliances", "Arts + Crafts", "ATV/UTV/SNO", "Auto Parts", "Aviation", "Baby + Kid", "Barter", "Beauty + Hlth", "Bike Parts", "Bikes", "Boat Parts", "Boats", "Books", "Business", "Cars + Trucks", "Cds/Dvds/VHS", "Cell Phones", "Clothes + Acc", "Collectibles", "Computer Parts", "Computers", "Electronics", "Farm + Garden", "Free", "Furniture", "Garage Sale", "General", "Heavy Equip", "Household", "Jewelry", "Materials", "Motorcycle Parts", "Motorcycles", "Music Instru", "Photo + Video", "RVS + Camp", "Sporting", "Tickets", "Tools", "Toys + Games", "Trailers", "Video Gaming", "Wanted", "Wheels + Tires"]
       }];
 
-      // Had trouble accessing the subjects array. I realized it was probably because of nesting. 
+      // Had trouble accessing the subjects array. I realized it was probably because of nesting.
       // Separated subjects objects into its own array and used another map function to display it properly.
       return categories.map(function (item, i) {
-        var arr = [];
-        arr.push(item.subjects);
-        console.log(arr[0]);
+        var subjects = [];
+        subjects.push(item.subjects);
         return _react2.default.createElement(
           "div",
           { className: "categories", key: item.id },
@@ -355,7 +365,7 @@ var Home = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "group-links" },
-            arr[0].map(function (subject) {
+            subjects[0].map(function (subject) {
               return _react2.default.createElement(
                 "a",
                 { href: "#", key: subject.id, className: "link" },
