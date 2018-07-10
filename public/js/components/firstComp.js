@@ -315,7 +315,7 @@ var Home = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
 
-    _this.loopTags = function () {
+    _this.loopTrending = function () {
       var trending = ["Apple Macbook", "iPhone X", "Hoverboard", "Lebron James Lakers jersey", "Nvidia GTX 1080", "Beats by Dre", "Kobe Bryant autographed jersey", "Lakers tickets"];
       return trending.map(function (item, i) {
         return _react2.default.createElement(
@@ -346,10 +346,10 @@ var Home = function (_Component) {
       }, {
         id: 5,
         title: "For Sale",
-        subjects: ["Antiques", "Appliances", "Arts + Crafts", "ATV/UTV/SNO", "Auto Parts", "Aviation", "Baby + Kid", "Barter", "Beauty + Hlth", "Bike Parts", "Bikes", "Boat Parts", "Boats", "Books", "Business", "Cars + Trucks", "Cds/Dvds/VHS", "Cell Phones", "Clothes + Acc", "Collectibles", "Computer Parts", "Computers", "Electronics", "Farm + Garden", "Free", "Furniture", "Garage Sale", "General", "Heavy Equip", "Household", "Jewelry", "Materials", "Motorcycle Parts", "Motorcycles", "Music Instru", "Photo + Video", "RVS + Camp", "Sporting", "Tickets", "Tools", "Toys + Games", "Trailers", "Video Gaming", "Wanted", "Wheels + Tires"]
+        subjects: ["Antiques", "Appliances", "Arts + Crafts", "Auto Parts", "Aviation", "Baby + Kid", "Beauty + Hlth", "Books", "Business", "Cars + Trucks", "Cds/Dvds/VHS", "Cell Phones", "Clothes + Acc", "Collectibles", "Computer Parts", "Computers", "Electronics", "Farm + Garden", "Furniture", "Garage Sale", "Household", "Jewelry", "Materials", "Motorcycles", "Photo + Video", "RVS + Camp", "Sporting", "Tickets", "Tools", "Toys + Games", "Video Gaming", "Wheels + Tires"]
       }];
 
-      // Had trouble accessing the subjects array. I realized it was probably because of nesting.
+      // Had trouble accessing the subjects array. I realized it was probably because of nesting with more array of objects.
       // Separated subjects objects into its own array and used another map function to display it properly.
       return categories.map(function (item, i) {
         var subjects = [];
@@ -415,7 +415,7 @@ var Home = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "trending-tags" },
-              this.loopTags()
+              this.loopTrending()
             )
           )
         )

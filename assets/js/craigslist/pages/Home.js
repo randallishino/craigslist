@@ -31,7 +31,7 @@ export default class Home extends Component {
     this.state = {};
   }
 
-  loopTags = () => {
+  loopTrending = () => {
     let trending = [
       "Apple Macbook",
       "iPhone X",
@@ -137,16 +137,10 @@ export default class Home extends Component {
           "Antiques",
           "Appliances",
           "Arts + Crafts",
-          "ATV/UTV/SNO",
           "Auto Parts",
           "Aviation",
           "Baby + Kid",
-          "Barter",
           "Beauty + Hlth",
-          "Bike Parts",
-          "Bikes",
-          "Boat Parts",
-          "Boats",
           "Books",
           "Business",
           "Cars + Trucks",
@@ -158,32 +152,25 @@ export default class Home extends Component {
           "Computers",
           "Electronics",
           "Farm + Garden",
-          "Free",
           "Furniture",
           "Garage Sale",
-          "General",
-          "Heavy Equip",
           "Household",
           "Jewelry",
           "Materials",
-          "Motorcycle Parts",
           "Motorcycles",
-          "Music Instru",
           "Photo + Video",
           "RVS + Camp",
           "Sporting",
           "Tickets",
           "Tools",
           "Toys + Games",
-          "Trailers",
           "Video Gaming",
-          "Wanted",
           "Wheels + Tires"
         ]
       }
     ];
 
-    // Had trouble accessing the subjects array. I realized it was probably because of nesting.
+    // Had trouble accessing the subjects array. I realized it was probably because of nesting with more array of objects.
     // Separated subjects objects into its own array and used another map function to display it properly.
     return categories.map((item, i) => {
       let subjects = [];
@@ -218,7 +205,7 @@ export default class Home extends Component {
               <i className="far fa-clock" />Trending Now
             </div>
 
-            <div className="trending-tags">{this.loopTags()}</div>
+            <div className="trending-tags">{this.loopTrending()}</div>
           </section>
         </div>
       </div>
