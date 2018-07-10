@@ -347,6 +347,10 @@ var Home = function (_Component) {
         id: 5,
         title: "For Sale",
         subjects: ["Antiques", "Appliances", "Arts + Crafts", "Auto Parts", "Aviation", "Baby + Kid", "Beauty + Hlth", "Books", "Business", "Cars + Trucks", "Cds/Dvds/VHS", "Cell Phones", "Clothes + Acc", "Collectibles", "Computer Parts", "Computers", "Electronics", "Farm + Garden", "Furniture", "Garage Sale", "Household", "Jewelry", "Materials", "Motorcycles", "Photo + Video", "RVS + Camp", "Sporting", "Tickets", "Tools", "Toys + Games", "Video Gaming", "Wheels + Tires"]
+      }, {
+        id: 6,
+        title: "Jobs",
+        subjects: ["Accounting", "Admin", "Arch/Engineering", "Art/Design", "Biotech/Science", "Business", "Customer Service", "Education", "Food/Hosp", "General Labor", "Government", "Human Resources", "Legal/Paralegal", "Marketing", "Medical/Health", "Real Estate", "Retail", "Sales", "Security", "Software/QA/DBA", "Systems/Network", "Tech Support", "TV/Film/Video", "Web/Design", "Writing/Editing"]
       }];
 
       // Had trouble accessing the subjects array. I realized it was probably because of nesting with more array of objects.

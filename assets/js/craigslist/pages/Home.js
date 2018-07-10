@@ -167,6 +167,37 @@ export default class Home extends Component {
           "Video Gaming",
           "Wheels + Tires"
         ]
+      },
+      {
+        id:6,
+        title:"Jobs",
+        subjects: [
+          "Accounting",
+          "Admin",
+          "Arch/Engineering",
+          "Art/Design",
+          "Biotech/Science",
+          "Business",
+          "Customer Service",
+          "Education",
+          "Food/Hosp",
+          "General Labor",
+          "Government",
+          "Human Resources",
+          "Legal/Paralegal",
+          "Marketing",
+          "Medical/Health",
+          "Real Estate",
+          "Retail",
+          "Sales",
+          "Security",
+          "Software/QA/DBA",
+          "Systems/Network",
+          "Tech Support",
+          "TV/Film/Video",
+          "Web/Design",
+          "Writing/Editing"
+        ]
       }
     ];
 
